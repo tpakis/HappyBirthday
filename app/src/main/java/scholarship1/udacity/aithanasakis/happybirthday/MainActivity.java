@@ -14,7 +14,7 @@ import com.plattysoft.leonids.ParticleSystem;
 import static scholarship1.udacity.aithanasakis.happybirthday.R.drawable.star_white;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
 
     // create timer
@@ -47,19 +47,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         timerHandler.removeCallbacks(timerRunnable);
 
         ImageView b = (ImageView) findViewById(R.id.imageView1);
-        b.setOnClickListener(this);
-    }
-        @Override
-        public void onClick(View v) {
-                ParticleSystem ps = new ParticleSystem(this, 100, R.drawable.star_white, 3000);
-                ps.setScaleRange(0.7f, 1.3f);
-                ps.setSpeedRange(0.1f, 0.25f);
-                ps.setRotationSpeedRange(90, 180);
-                ps.setFadeOut(200, new AccelerateInterpolator());
-                ps.oneShot(v, 70);
+        b.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                showfireworks(v);
+
 
             }
+        });
+    }
 
+    public void showfireworks(View v){
+        ParticleSystem ps = new ParticleSystem(this, 100, R.drawable.star_white, 3000);
+        ps.setScaleRange(0.7f, 1.3f);
+        ps.setSpeedRange(0.1f, 0.25f);
+        ps.setRotationSpeedRange(90, 180);
+        ps.setFadeOut(200, new AccelerateInterpolator());
+        ps.oneShot(v, 70);
+    }
 
 
     @Override
