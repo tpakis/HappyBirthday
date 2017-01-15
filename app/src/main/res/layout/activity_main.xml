@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/androidparty"
-
         android:id="@+id/imageView1"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true" />
     <TextView
         android:layout_width="wrap_content"
