@@ -2,25 +2,18 @@ package scholarship1.udacity.aithanasakis.happybirthday;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
-import android.widget.Button;
 import android.widget.ImageView;
-
 import com.plattysoft.leonids.ParticleSystem;
-
-import static scholarship1.udacity.aithanasakis.happybirthday.R.drawable.star_white;
 
 
 public class MainActivity extends AppCompatActivity {
 
 
     // create timer
-
     long startTime = 0;
-
     //runs without a timer by reposting this handler at the end of the runnable
     Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
@@ -29,12 +22,6 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             long millis = System.currentTimeMillis() - startTime;
             int seconds = (int) (millis / 1000);
-            int minutes = seconds / 60;
-            seconds = seconds % 60;
-
-            // timerTextView.setText(String.format("%d:%02d", minutes, seconds));
-
-            //timerHandler.postDelayed(this, 500);
         }
     };
 
@@ -50,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 showfireworks(v);
-
-
             }
         });
     }
@@ -70,7 +55,5 @@ public class MainActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();
         timerHandler.removeCallbacks(timerRunnable);
-        //Button b = (Button)findViewById(R.id.button);
-        //b.setText("start");
     }
 }

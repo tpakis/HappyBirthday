@@ -17,27 +17,17 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true" />
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Happy Birthday Vicky!"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@android:color/white"
-        android:textSize="36sp"
+        style="@style/textbox"
+        android:text="@string/message1"
         android:id="@+id/textView1" />
 
     <TextView
-        android:text="From Thanos"
-        android:layout_margin="20dp"
-        android:textSize="36sp"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:text="@string/message2"
+        style="@style/textbox"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="94dp"
-        android:layout_marginStart="94dp"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginStart="@dimen/large_margin"
         android:id="@+id/textView2" />
 
 </RelativeLayout>
